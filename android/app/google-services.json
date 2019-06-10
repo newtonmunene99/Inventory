@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "206126548636",
+    "firebase_url": "https://ofmke-e9dc7.firebaseio.com",
+    "project_id": "ofmke-e9dc7",
+    "storage_bucket": "ofmke-e9dc7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206126548636:android:ef0790e37df99823",
+        "android_client_info": {
+          "package_name": "org.ofmkenya.inventory.admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "206126548636-2h8re6lmiums584799ces9jbth2750kn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.ofmkenya.inventory.admin",
+            "certificate_hash": "5ecfdabfdb49bc88ade43a5a96d4c52e32295623"
+          }
+        },
+        {
+          "client_id": "206126548636-403jbidbt8itnsqt0e46k0au309vp77h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2ywPcpQqmH3OMW-r0UzRk_2_wXQkmA2s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "206126548636-403jbidbt8itnsqt0e46k0au309vp77h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
