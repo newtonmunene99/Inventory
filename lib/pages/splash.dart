@@ -10,30 +10,33 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    authService.auth.onAuthStateChanged.listen((user) {
-      if (user != null) {
-        if (user.isEmailVerified) {
-          Navigator.pushReplacementNamed(context, '/home');
+    if (mounted) {
+      authService.auth.onAuthStateChanged.listen((user) {
+        if (user != null) {
+          if (user.isEmailVerified) {
+            Navigator.pushReplacementNamed(context, '/home');
+          } else {
+            user.reload().then((_) async {
+              user = await authService.auth.currentUser();
+              if (user.isEmailVerified) {
+                Navigator.pushReplacementNamed(context, '/home');
+              } else {
+                Navigator.pushReplacementNamed(context, '/verify');
+              }
+            });
+          }
         } else {
-          user.reload().then((_) async {
-            user = await authService.auth.currentUser();
-            if (user.isEmailVerified) {
-              Navigator.pushReplacementNamed(context, '/home');
-            } else {
-              Navigator.pushReplacementNamed(context, '/verify');
-            }
-          });
+          Navigator.pushReplacementNamed(context, '/login');
         }
-      } else {
-        Navigator.pushReplacementNamed(context, '/login');
-      }
-    });
+      });
+    }
+
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-     return Scaffold(
+    return Scaffold(
       body: Container(
         child: Center(
           child: SizedBox(

@@ -492,23 +492,7 @@ class _EmployeesPageState extends State<EmployeesPage> {
                                 ),
                               ),
                             ),
-                            DropdownButton<bool>(
-                              value: activeDropdownValue,
-                              onChanged: (bool newValue) {
-                                setState(() {
-                                  activeDropdownValue = newValue;
-                                });
-                              },
-                              items: <bool>[true, false]
-                                  .map<DropdownMenuItem<bool>>((bool value) {
-                                return DropdownMenuItem<bool>(
-                                  value: value,
-                                  child: Text(
-                                    value.toString().toUpperCase(),
-                                  ),
-                                );
-                              }).toList(),
-                            ),
+                            EditDropdownButton(),
                           ],
                         ),
                       ),
@@ -548,12 +532,11 @@ class _EmployeesPageState extends State<EmployeesPage> {
                                       dbService
                                           .editEmployee(
                                         Employee(
-                                          name: _nameController.text,
-                                          email: employee.email,
-                                          shops: selectedShops,
-                                          active: activeDropdownValue,
-                                          roles: employee.roles
-                                        ),
+                                            name: _nameController.text,
+                                            email: employee.email,
+                                            shops: selectedShops,
+                                            active: activeDropdownValue,
+                                            roles: employee.roles),
                                       )
                                           .then((_) {
                                         Navigator.pop(context);
@@ -602,6 +585,33 @@ class _EmployeesPageState extends State<EmployeesPage> {
           );
         }
       },
+    );
+  }
+}
+
+class EditDropdownButton extends StatefulWidget {
+  @override
+  _EditDropdownButtonState createState() => _EditDropdownButtonState();
+}
+
+class _EditDropdownButtonState extends State<EditDropdownButton> {
+  @override
+  Widget build(BuildContext context) {
+    return DropdownButton<bool>(
+      value: activeDropdownValue,
+      onChanged: (bool newValue) {
+        setState(() {
+          activeDropdownValue = newValue;
+        });
+      },
+      items: <bool>[true, false].map<DropdownMenuItem<bool>>((bool value) {
+        return DropdownMenuItem<bool>(
+          value: value,
+          child: Text(
+            value.toString().toUpperCase(),
+          ),
+        );
+      }).toList(),
     );
   }
 }
