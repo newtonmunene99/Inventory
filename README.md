@@ -8,6 +8,13 @@ Admin Inventory Management System built Flutter
 2. Merchant app
 3. Firebase functions
 
+## Getting Started
+
+1. Create a firebase project
+2. Add apps for android and ios. Two of each,one for admin and one for merchant.
+3. Ensure to replace the google services json and plist files for respective projects.
+4. Enable google sign in and firestore on firebase.
+  
 ### Screenshots
 
 | Screenshot                                                                         | Screenshot                                                                         | Screenshot                                                                         |
