@@ -7,14 +7,14 @@ import './pages/verify.dart';
 import './providers/db.dart';
 import './providers/connection.dart';
 
-void main() => runApp(Ofm());
+void main() => runApp(MyApp());
 
-class Ofm extends StatefulWidget {
+class MyApp extends StatefulWidget {
   @override
-  _OfmState createState() => _OfmState();
+  _MyAppState createState() => _MyAppState();
 }
 
-class _OfmState extends State<Ofm> {
+class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     connectionService.connected.listen((connected) {

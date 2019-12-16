@@ -46,7 +46,7 @@ class _SplashScreenState extends State<SplashScreen> {
               baseColor: Colors.red,
               highlightColor: Colors.yellow,
               child: Text(
-                'OFM',
+                'INVENTORY',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 40.0,

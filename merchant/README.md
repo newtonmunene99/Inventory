@@ -1,6 +1,6 @@
-# ofm_merchant
+# Inventory Merchant
 
-Inventory for Organic Farmer&#x27;s Market Kenya
+Inventory App for merchant
 
 ## Getting Started
 

@@ -1,6 +1,6 @@
-# ofm_admin
+# Inventory_admin
 
-Inventory system for Organic Farmer&#x27;s Market Kenya
+Inventory system 
 
 ## Getting Started
 

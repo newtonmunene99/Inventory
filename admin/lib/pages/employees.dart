@@ -196,8 +196,8 @@ class _EmployeesPageState extends State<EmployeesPage> {
                                                 children: employee.shops
                                                     .map(
                                                       (shop) => Text(
-                                                            shop.shop,
-                                                          ),
+                                                        shop.shop,
+                                                      ),
                                                     )
                                                     .toList(),
                                               ),
@@ -626,23 +626,26 @@ class _ShopsAlertDialogState extends State<ShopsAlertDialog> {
   Widget build(BuildContext context) {
     return AlertDialog(
       title: Text('Select shops to allocate employee to'),
-      content: ListView.builder(
-        itemCount: shops.length,
-        itemBuilder: (BuildContext context, int index) => CheckboxListTile(
-              title: Text(shops[index].shop),
-              value: selectedShops.contains(shops[index]),
-              onChanged: (bool selected) {
-                if (selected) {
-                  setState(() {
-                    selectedShops.add(shops[index]);
-                  });
-                } else {
-                  setState(() {
-                    selectedShops.remove(shops[index]);
-                  });
-                }
-              },
-            ),
+      content: Container(
+        width: 300,
+        child: ListView.builder(
+          itemCount: shops.length,
+          itemBuilder: (BuildContext context, int index) => CheckboxListTile(
+            title: Text(shops[index].shop),
+            value: selectedShops.contains(shops[index]),
+            onChanged: (bool selected) {
+              if (selected) {
+                setState(() {
+                  selectedShops.add(shops[index]);
+                });
+              } else {
+                setState(() {
+                  selectedShops.remove(shops[index]);
+                });
+              }
+            },
+          ),
+        ),
       ),
       actions: <Widget>[
         FlatButton(

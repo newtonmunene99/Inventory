@@ -68,7 +68,7 @@ class _RegisterFormState extends State<RegisterForm> {
                 baseColor: Theme.of(context).primaryColor,
                 highlightColor: Colors.yellow,
                 child: Text(
-                  'OFM',
+                  'INVENTORY',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 60.0,

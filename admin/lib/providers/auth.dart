@@ -24,8 +24,11 @@ class AuthProvider {
 
       if (emailexists) {
         try {
-          return await auth.signInWithEmailAndPassword(
-              email: email, password: password);
+          return (await auth.signInWithEmailAndPassword(
+            email: email,
+            password: password,
+          ))
+              .user;
         } catch (e) {
           throw e;
         }
@@ -41,8 +44,11 @@ class AuthProvider {
       {String email, String password, String username}) async {
     if (connectionService.connected.value) {
       try {
-        final FirebaseUser user = await auth.createUserWithEmailAndPassword(
-            email: email, password: password);
+        final FirebaseUser user = (await auth.createUserWithEmailAndPassword(
+          email: email,
+          password: password,
+        ))
+            .user;
 
         UserUpdateInfo info = UserUpdateInfo();
         info.displayName = username;
