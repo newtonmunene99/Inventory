@@ -14,6 +14,11 @@ Admin Inventory Management System built Flutter
 2. Add apps for android and ios. Two of each,one for admin and one for merchant.
 3. Ensure to replace the google services json and plist files for respective projects.
 4. Enable google sign in and firestore on firebase.
+
+### Roadmap
+- [ ] Move to MongoDb and Node Js backend
+- [ ] Better UI
+- [ ] Push notifications
   
 ### Screenshots
 
